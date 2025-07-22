@@ -21,8 +21,11 @@ const Navbar = () => {
           >
             Cart
           </Link>
-          <Link to="/" className="hover:text-blue-600 transition duration-200">
-            Sign In
+          <Link
+            to="/add-product"
+            className="hover:text-blue-600 transition duration-200"
+          >
+            Add Product
           </Link>
         </div>
       </div>

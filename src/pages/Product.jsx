@@ -7,7 +7,7 @@ import { useCart } from "../context/CartContext";
 
 const Product = () => {
   const { addToCart } = useCart();
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(1);
 
   const { id } = useParams();
   const { data, isLoading, error, isError } = useQuery({
@@ -32,11 +32,14 @@ const Product = () => {
         {quantity}
         <button
           className="cursor-pointer  m-2 p-1"
-          onClick={() => setQuantity((prev) => prev + 1)}
+          onClick={() =>
+            setQuantity((prev) => (prev < data.rating.count ? prev + 1 : prev))
+          }
         >
           +
         </button>
       </div>
+      <div className="text-amber-700">{data.rating.count} available</div>
       <button
         className="border cursor-pointer rounded-2xl p-2 my-2 mx-[-3px]"
         onClick={() => {
