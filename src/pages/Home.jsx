@@ -15,7 +15,7 @@ const Home = () => {
   if (isError) return <p className="p-4 text-red-500">Error:{error.message}</p>;
 
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-4 p-4">
+    <div className="min-h-screen grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-4 p-4">
       {data.map((prods) => (
         <ProductCard
           key={prods.id}
