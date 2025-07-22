@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { fetchProductById } from "../api/fetchData";
 import { useQuery } from "@tanstack/react-query";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import { useCart } from "../context/CartContext";
 
